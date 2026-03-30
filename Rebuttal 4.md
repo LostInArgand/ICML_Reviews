@@ -16,8 +16,9 @@ We agree that real-world validation is essential. Synthetic corruption is used f
 
 In addition, we evaluate on:
 
--   **Naturally occurring annotation errors** (e.g., out-of-context frames in Cholec80), where CSL consistently identifies anomalous segments.
--   Consistent qualitative behavior across datasets, indicating robustness beyond synthetic settings.
+-   **EgoPER (real errors):** This dataset already contains intentionally mislabeled and temporally disordered samples, as described in its original paper. We directly evaluate CSL on these real annotation errors, demonstrating its effectiveness in realistic settings.
+-   **Cholec80 (controlled validation):** While Cholec80 also contains some naturally occurring annotation inconsistencies (e.g., out-of-context frames during surgical phases), we introduce additional synthetic corruption to enable controlled and quantitative evaluation (e.g., AUC).
+-   Consistent behavior across **EgoPER (real errors)** and **Cholec80 (synthetic + real errors)** supports the generality and robustness of CSL.
 
 We will strengthen this section with additional **real-error case studies** and clearer separation between synthetic and real evaluations.
 
@@ -68,6 +69,6 @@ We will incorporate additional experiments and clarifications to further strengt
 
 We thank the reviewer again for the constructive feedback.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM1NDI1NjEyOCwxMTk5NDMxNjEwLDczMD
-k5ODExNl19
+eyJoaXN0b3J5IjpbNDY5NTE1MjYsMTE5OTQzMTYxMCw3MzA5OT
+gxMTZdfQ==
 -->
