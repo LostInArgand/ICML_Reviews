@@ -33,15 +33,22 @@ We will add experiments demonstrating robustness to reduced checkpoint frequency
 We agree that stronger empirical validation is needed. While the method is architecture-independent by design, our current experiments focus on controlled settings with one spatial and one temporal backbone.
 
 In the revision, we will include:
-
--   Additional CNN-based models
--   Alternative temporal architectures (e.g., multi-stage temporal convolution and transformer variants)
+-   CNN-based models (shown in Table 5)
+-   Alternative temporal architectures (e.g., MSTCN/ASFormer)
 
 Preliminary results show consistent trends across architectures, supporting the generality of the approach. These will be included to substantiate the model-agnostic claim.
 
 ----------
 
 ### 5. Ablation study and robustness to noise
+We appreciate the suggestion to evaluate robustness under varying noise levels. Our current results include a 10% controlled corruption setting, where performance degradation is minimal (≤ 1.6 AUC), indicating stability.
+
+We will extend this analysis to:
+-   Multiple noise levels (e.g., 20%, 40%)
+-   CSL distribution shifts under increasing corruption
+-   Failure modes under extreme noise
+
+We note that very high noise regimes (e.g., ≥80%) are less representative of practical scenarios, as they fundamentally alter the learning process. Instead, we focus on realistic settings where moderate corruption is added to inherently noisy real-world datasets. Even in this regime, CSL remains robust due to trajectory aggregation, which dampens stochastic noise effects.
 
 We appreciate this suggestion and note that we already include a 10% noisy training experiment (Table 6), where performance drops are minimal (≤ 1.6 AUC).
 
@@ -73,6 +80,6 @@ We will revise the paper to better highlight these contributions and include add
 
 We thank the reviewer again for the valuable feedback.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI1MzQ2OTE5MiwtMTA5NjkyNDM5OCwxMT
-c0MjAyNTc0LDExODkyMTQ1OTNdfQ==
+eyJoaXN0b3J5IjpbNTk2NjA1NTI3LC0xMDk2OTI0Mzk4LDExNz
+QyMDI1NzQsMTE4OTIxNDU5M119
 -->
