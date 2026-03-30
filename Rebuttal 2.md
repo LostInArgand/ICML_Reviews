@@ -51,15 +51,10 @@ We agree that validation on real errors is critical.
 -   On **EgoPER**, which contains _real annotation errors_ (both semantic and temporal), CSL successfully identifies mislabeled and disordered segments, demonstrating **practical effectiveness.**
 -   On **Cholec80**, we use **controlled synthetic corruption** to enable quantitative evaluation, while also benefiting from naturally occurring annotation inconsistencies.
 
-Importantly, we observe **consistent behavior across both datasets**, indicating that CSL generalizes beyond synthetic noise. We will further clarify this distinction and highlight real-error results more explicitly.We agree that validation on real errors is essential. In addition to synthetic corruption, we evaluate on both datasets with complementary roles:
+Importantly, we observe **consistent behavior across both datasets**, indicating that CSL generalizes beyond synthetic noise. We will clarify this distinction and highlight real-error results. 
 
--   **EgoPER (real errors):** This dataset already contains intentionally mislabeled and temporally disordered samples, as described in its original paper. We directly evaluate CSL on these real annotation errors, demonstrating its effectiveness in realistic settings.
--   **Cholec80 (controlled validation):** While Cholec80 also contains some naturally occurring annotation inconsistencies, we introduce additional synthetic corruption to enable controlled and quantitative evaluation.
--   Consistent behavior across **EgoPER (real errors)** and **Cholec80 (synthetic + real errors)** supports the generality and robustness of CSL.
-
-----------
-
-### 5. Presentation and positioning
+---
+## 5. Presentation and positioning
 
 We acknowledge that aspects of the presentation may have led to confusion. In the revision, we will:
 
@@ -81,6 +76,6 @@ In summary, the concerns primarily stem from presentation clarity rather than li
 
 We thank the reviewer again for the constructive feedback.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNjU2NDM3MjYsLTEyMTk0MTI1NzEsND
-c3MjQ4ODUwLDQ5NDczODczMF19
+eyJoaXN0b3J5IjpbLTQ3MDI1OTM4MCwtMTIxOTQxMjU3MSw0Nz
+cyNDg4NTAsNDk0NzM4NzMwXX0=
 -->
