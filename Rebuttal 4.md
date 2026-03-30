@@ -56,6 +56,5 @@ In Summary, the concerns primarily relate to **scale, validation breadth, and co
 -   Including **comparisons with recent temporal models**
 -   Providing clearer analysis of **computational trade-offs**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NjQ4OTk0Myw4MDExNTg1MywxMTk5ND
-MxNjEwLDczMDk5ODExNl19
+eyJoaXN0b3J5IjpbLTE0NjQ4OTk0M119
 -->
