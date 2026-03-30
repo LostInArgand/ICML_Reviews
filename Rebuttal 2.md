@@ -1,8 +1,23 @@
-We thank the reviewer for the detailed feedback and for recognizing the importance of the problem. Below we clarify key points and address the concerns.
+We thank the reviewer for the detailed feedback and for recognizing the importance of the problem. Below we clarify key points and address the concerns regarding soundness, scalability, and novelty, and clarify our claims.
 
-----------
+---
+## 1. "Lightweight / training-free" vs. computational cost
+- By _training-free_, we specifically refer to the **auditing stage**, not the full pipeline. Our method does **not require retraining, relabeling, or auxiliary models** once standard training checkpoints are available.
 
-### 1. "Lightweight / training-free" vs. computational cost
+Importantly, we do **not introduce any additional training requirement** beyond standard practice. Training a temporal model until convergence is already necessary for phase recognition tasks, and our method simply **reuses these existing checkpoints**.
+
+Regarding cost:
+
+-   The auditing complexity scales with _(#epochs × model size × video length)_, but:
+    -   It requires **only forward passes (no gradients)**, making it significantly cheaper than training.
+    -   It is **fully parallelizable** across checkpoints and videos.
+-   Storage overhead can be reduced via:
+    -   **Checkpoint subsampling** (e.g., every _k_ epochs)
+    -   **EMA or partial checkpoints**
+
+In our current setup (200 epochs), checkpoint storage is on the order of standard training logs, and auditing runtime is comparable to a small multiple of inference. We will include **explicit runtime and storage statistics** and scaling analysis (longer videos, larger backbones) in the revision.
+
+Thus, “lightweight” should be interpreted as **no additional training overhead and simple post-hoc computation**, rather than negligible total cost.
 
 We clarify that _training-free_ refers specifically to the **auditing stage**, not the initial model training. Our method requires **no retraining, relabeling, or auxiliary models** once checkpoints are available.
 
@@ -76,5 +91,5 @@ In summary, the concerns primarily stem from presentation clarity rather than li
 
 We thank the reviewer again for the constructive feedback.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDk0NzM4NzMwXX0=
+eyJoaXN0b3J5IjpbMTg3Mjc5MjQzNiw0OTQ3Mzg3MzBdfQ==
 -->
