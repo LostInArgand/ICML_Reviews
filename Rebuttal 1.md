@@ -25,9 +25,8 @@ We will revise the paper to better emphasize these video-specific methodological
 ## 3. Computational and storage cost
 
 We acknowledge the concern regarding checkpoint usage. However:
-
--   The cost is offline and embarrassingly parallel.
--   In practice, checkpoint subsampling (e.g., every _k_ epochs) yields similar performance (we will include this ablation in the revision).
+-   The overall computation cost is parallelizable.
+-   In practice, subsampling checkpoint subsampling (e.g., every _k_ epochs) yields similar performance (we will include this ablation in the revision).
 -   CSL computation requires no gradients and only forward passes, making it significantly cheaper than training.
 -   Storage can be reduced using lightweight checkpointing (e.g., EMA weights or partial layers).
 
@@ -81,6 +80,6 @@ We will revise the paper to better highlight these contributions and include add
 
 We thank the reviewer again for the valuable feedback.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIzNjE1Njc2OCwtMTA5NjkyNDM5OCwxMT
+eyJoaXN0b3J5IjpbLTQ4OTQ0OTAyMywtMTA5NjkyNDM5OCwxMT
 c0MjAyNTc0LDExODkyMTQ1OTNdfQ==
 -->
