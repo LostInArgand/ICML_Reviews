@@ -4,7 +4,7 @@ We thank the reviewer for the constructive feedback and address the concerns bel
 
 ## 1. Novelty beyond Dataset Cartography / prior training-dynamics work
 
-We agree that leveraging training dynamics to identify mislabeled samples has been explored in prior work (e.g., Dataset Cartography). However, our contribution is not a direct extension but a reformulation tailored to temporally structured video data. Specifically, prior methods operate on independent samples, whereas our approach explicitly models _temporal coherence_. This enables (i) **frame-level and sequence-level detection** (as discussed in Sec. 3.3), and (ii) identification of **temporal disordering**, which cannot be captured by per-sample difficulty alone.
+We agree that leveraging training dynamics to identify mislabeled samples has been explored in prior work (e.g., Dataset Cartography). However, our contribution is not a direct extension, but a reformulation tailored to **temporally structured video data.** Specifically, prior methods operate on independent samples, whereas our approach explicitly models _temporal coherence_. This enables (i) **frame-level and sequence-level detection**, and (ii) identification of **temporal disordering** (as discussed in Sec. 3.3), which cannot be captured by per-sample difficulty alone.
 
 Our CSL formulation aggregates loss trajectories over time and reveals _structured temporal signatures_ (e.g., boundary-localized spikes vs. sustained inconsistencies), providing signals that are fundamentally unavailable in static settings. In addition, we **unify semantic mislabeling and temporal inconsistency detection** within a single framework, whereas prior work focuses only on label noise. We will revise the paper to more clearly position these distinctions.
 
@@ -84,6 +84,6 @@ We will revise the paper to better highlight these contributions and include add
 
 We thank the reviewer again for the valuable feedback.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MTEwNDA1MDMsLTEwOTY5MjQzOTgsMT
-E3NDIwMjU3NCwxMTg5MjE0NTkzXX0=
+eyJoaXN0b3J5IjpbMTg0MTI0MzMxMSwtMTA5NjkyNDM5OCwxMT
+c0MjAyNTc0LDExODkyMTQ1OTNdfQ==
 -->
