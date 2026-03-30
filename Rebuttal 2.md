@@ -1,7 +1,7 @@
-We thank the reviewer for the detailed feedback and for recognizing the importance of the problem. Below we clarify key points and address the concerns regarding soundness, scalability, and novelty, and clarify our claims.
+We thank the reviewer for the detailed feedback and for recognizing the importance of the problem. Below we clarify key points and address the concerns.
 
 ---
-## 1. "Lightweight / training-free" vs. computational cost
+## 1. "Lightweight / training-free"
 - By _training-free_, we specifically refer to the **auditing stage**, not the full pipeline. Our method does **not require retraining, relabeling, or auxiliary models** once standard training checkpoints are available.
 
 Importantly, we do **not introduce any additional training requirement** beyond standard practice. Training a temporal model until convergence is already necessary for phase recognition tasks, and our method simply **reuses these existing checkpoints**.
@@ -56,7 +56,6 @@ Importantly, we observe **consistent behavior across both datasets**, indicating
 ---
 ## 5. Presentation and positioning
 We respectfully disagree that our claims are overstated; they are **supported by both the method design and empirical results**.
-
 -   **Training-free / lightweight:** These terms refer to the **auditing stage**, which requires no retraining or auxiliary models and uses only forward passes on existing checkpoints. 
 -   **Scalability:** While costs exist, they are **controllable (e.g., checkpoint subsampling)** and **parallelizable**. Our results remain stable under reduced checkpoint density, supporting practical scalability.
 -   **Novelty and positioning:** Although grounded in prior training-dynamics intuition, our contribution is the **extension to temporally structured video**, enabling **temporal inconsistency detection and sequence-level signals**, which are validated across datasets.
@@ -64,21 +63,7 @@ We respectfully disagree that our claims are overstated; they are **supported by
 We will improve clarity and add quantitative details, but the claims themselves are **not overreaching**.
 
 
-----------
-
-### 6. Summary
-
-In summary, the concerns primarily stem from presentation clarity rather than limitations of the method. Our contributions are:
-
--   A **novel formulation** of annotation error detection in temporal video data
--   A **unified framework** for semantic mislabeling and temporal disordering
--   A **practical, post-hoc auditing method** leveraging standard training artifacts
--   Strong empirical validation on two real-world datasets
-
-----------
-
-We thank the reviewer again for the constructive feedback.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MDc1NzExMTYsLTEyMTk0MTI1NzEsND
-c3MjQ4ODUwLDQ5NDczODczMF19
+eyJoaXN0b3J5IjpbLTMzNTM4ODUzMiwtMTIxOTQxMjU3MSw0Nz
+cyNDg4NTAsNDk0NzM4NzMwXX0=
 -->
