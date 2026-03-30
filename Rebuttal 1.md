@@ -64,6 +64,5 @@ In summary, our contributions are:
 -   A **training-free, scalable auditing mechanism** based on loss trajectories
 -   **Consistent empirical performance** across challenging datasets
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYxMDgyNjk4LC04ODI0NTU4MTgsLTEwOT
-Y5MjQzOTgsMTE3NDIwMjU3NCwxMTg5MjE0NTkzXX0=
+eyJoaXN0b3J5IjpbLTYxMDgyNjk4XX0=
 -->
