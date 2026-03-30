@@ -16,14 +16,13 @@ Thus, while inspired by training dynamics, our work introduces new problem formu
 
 We respectfully argue that simplicity is a strength, not a limitation, especially for dataset auditing tools. Importantly:
 -   The key innovation lies in how loss trajectories are aggregated and interpreted in temporal contexts (CSL + smoothing + sequence analysis), not in architectural complexity.
--   Temporal modeling fundamentally changes the behavior of loss dynamics (Table 5). Transformers significantly outperform CNNs for disorder detection, thereby capturing temporal structure rather than treating frames independently.
+-   Temporal modeling fundamentally changes the behavior of loss dynamics (Table 5). Transformers significantly outperform CNNs for disorder detection, thereby capturing temporal structure of videos rather than frame level interpretation.
 -   Our method provides interpretable signals (e.g., sustained vs. spiky loss patterns), which are critical for human-in-the-loop dataset cleaning.
 
 We will revise the paper to better emphasize these video-specific methodological insights.
 
-----------
-
-### 3. Computational and storage cost
+---
+## 3. Computational and storage cost
 
 We acknowledge the concern regarding checkpoint usage. However:
 
@@ -82,6 +81,6 @@ We will revise the paper to better highlight these contributions and include add
 
 We thank the reviewer again for the valuable feedback.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYzODQ4ODUxOSwtMTA5NjkyNDM5OCwxMT
+eyJoaXN0b3J5IjpbMTIzNjE1Njc2OCwtMTA5NjkyNDM5OCwxMT
 c0MjAyNTc0LDExODkyMTQ1OTNdfQ==
 -->
