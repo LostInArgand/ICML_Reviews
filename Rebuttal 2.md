@@ -34,18 +34,16 @@ We acknowledge the concern about scalability. The method is designed to be flexi
 -   The framework is **model-agnostic**, allowing smaller backbones when scaling.
 -   Computation is **offline and parallel**, making it practical for large datasets in distributed settings.
 
-We will provide **empirical evidence of performance vs. checkpoint density** and detailed cost breakdowns to better support this claim.
-The method is inherently scalable:
-
--   Storage can be reduced via **checkpoint subsampling**, **EMA weights**, or **partial checkpointing**.
--   CSL is empirically robust to reduced checkpoint density (to be included in revision).
--   The framework is **model-agnostic**, enabling the use of smaller backbones when scaling to larger datasets.
-
 We will include explicit runtime and storage statistics (for 200 epochs) to further clarify scalability.
 
-----------
+---
+## 3. Novelty beyond "naive averaging"
+We respectfully disagree that the method reduces to naive averaging of loss. While we build on the well-established idea of training dynamics, our contribution lies in **extending and redefining these signals for temporally structured video data**, which introduces qualitatively new capabilities:
+-   **Temporal error detection:** Beyond semantic mislabeling, we detect **temporal disordering**, which cannot be captured by per-sample difficulty or static averaging.
+-   **Structured temporal signatures:** CSL reveals distinct patterns (e.g., boundary-localized spikes vs. sustained inconsistencies), enabling differentiation between error types.
+-   **Sequence-aware behavior:** The effectiveness of temporal models (e.g., transformers outperforming CNNs for disorder detection) demonstrates that the signal is **not frame-independent**, but leverages temporal context.
 
-### 3. Novelty beyond "naive averaging"
+To our knowledge, prior training-dynamics approaches operate in i.i.d. settings and do not address **sequence-level inconsistency or temporal structure**. We will revise the paper to better emphasize this distinction and avoid overstating contributions.
 
 We respectfully disagree with the characterization of our method as a naive averaging of loss.
 
@@ -92,6 +90,6 @@ In summary, the concerns primarily stem from presentation clarity rather than li
 
 We thank the reviewer again for the constructive feedback.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMTk0MTI1NzEsNDc3MjQ4ODUwLDQ5ND
-czODczMF19
+eyJoaXN0b3J5IjpbMTYwMzE2MTc1NCwtMTIxOTQxMjU3MSw0Nz
+cyNDg4NTAsNDk0NzM4NzMwXX0=
 -->
