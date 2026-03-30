@@ -55,11 +55,14 @@ Importantly, we observe **consistent behavior across both datasets**, indicating
 
 ---
 ## 5. Presentation and positioning
+We respectfully disagree that our claims are overstated; they are **supported by both the method design and empirical results**.
 
-We acknowledge that aspects of the presentation may have led to confusion. In the revision, we will:
+-   **Training-free / lightweight:** These terms refer to the **auditing stage**, which requires no retraining or auxiliary models and uses only forward passes on existing checkpoints. 
+-   **Scalability:** While costs exist, they are **controllable (e.g., checkpoint subsampling)** and **parallelizable**. Our results remain stable under reduced checkpoint density, supporting practical scalability.
+-   **Novelty and positioning:** Although grounded in prior training-dynamics intuition, our contribution is the **extension to temporally structured video**, enabling **temporal inconsistency detection and sequence-level signals**, which are validated across datasets.
 
--   Clearly distinguish **training-free auditing** from overall pipeline cost
--   Refine claims to improve clarity and precision
+We will improve clarity and add quantitative details, but the claims themselves are **not overreaching**.
+
 
 ----------
 
@@ -76,6 +79,6 @@ In summary, the concerns primarily stem from presentation clarity rather than li
 
 We thank the reviewer again for the constructive feedback.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ3MDI1OTM4MCwtMTIxOTQxMjU3MSw0Nz
-cyNDg4NTAsNDk0NzM4NzMwXX0=
+eyJoaXN0b3J5IjpbLTE0MDc1NzExMTYsLTEyMTk0MTI1NzEsND
+c3MjQ4ODUwLDQ5NDczODczMF19
 -->
