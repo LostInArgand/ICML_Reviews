@@ -22,7 +22,7 @@ The **consistent trends across real (EgoPER) and mixed (Cholec80)** settings ind
 We acknowledge the computational cost of evaluating across checkpoints. However:
 -   CSL is **training-free and uses only forward passes**, making it significantly cheaper than training.
 -   The process is **fully parallelizable** across frames and checkpoints.
--   Cost can be reduced via **checkpoint subsampling**, with minimal performance loss.
+-   Cost can be reduced via **k- checkpoint subsampling**, with minimal performance loss.
 
 |Method|EDA|AUC|
 |:-|:-:|:-:|
@@ -35,18 +35,14 @@ We acknowledge the computational cost of evaluating across checkpoints. However:
 
 Thus, while non-trivial, the cost is **controllable and practical** in typical training pipelines.
 
-We acknowledge the concern regarding the O(E⋅T) cost. However:
+---
+## 4. Comparison with stronger temporal models
+We agree that comparisons with stronger temporal models are important.
+Our goal is not to propose a new segmentation architecture, but a **model-agnostic auditing framework** for temporal-rich video datasets. 
 
--   The computation is **offline and requires only forward passes**, making it significantly cheaper than training.
--   The method does not require large models, enabling flexible control over model size.
--   Checkpoint subsampling (e.g., every _k_ epochs) substantially reduces cost with minimal impact (to be included in revision).
--   The process is **parallel** across frames and checkpoints.
+-   Results already show that **transformer-based temporal models outperform CNNs** in detecting temporal disorder, indicating CSL benefits from stronger sequence modeling.
+-   We will extend experiments to **recent state-of-the-art architectures** (e.g., MSTCN, ASFormer) to demonstrate consistency across models.
 
-Thus, the cost–accuracy trade-off is controllable in practice, making the method scalable.
-
-----------
-
-### 4. Comparison with stronger temporal models
 
 We appreciate this suggestion. Our goal is not to propose a new segmentation architecture, but a **model-agnostic auditing framework**.
 
@@ -77,6 +73,6 @@ We will incorporate additional experiments and clarifications to further strengt
 
 We thank the reviewer again for the constructive feedback.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MjI3MzYyMDksODAxMTU4NTMsMTE5OT
+eyJoaXN0b3J5IjpbLTE2NzQwNjM3OTMsODAxMTU4NTMsMTE5OT
 QzMTYxMCw3MzA5OTgxMTZdfQ==
 -->
