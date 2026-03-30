@@ -7,7 +7,16 @@ We agree that evaluation on larger benchmarks (e.g., 50Salads, Breakfast) would 
 Importantly, CSL is **dataset-agnostic**, as it operates purely on per-frame loss trajectories without dataset-specific assumptions. Its formulation does not depend on domain characteristics, suggesting it should transfer to larger benchmarks. We will include additional experiments on larger datasets to empirically validate this.
 
 ---
-### 2. Synthetic vs. real annotation errors
+## 2. Synthetic vs. real annotation errors
+We acknowledge the limitation of relying partly on synthetic corruption. Synthetic noise enables **controlled, quantitative evaluation** (e.g., AUC), which is otherwise infeasible due to unknown ground-truth errors.
+
+Crucially, our evaluation is not limited to synthetic settings:
+
+-   **EgoPER** contains _real semantic and temporal annotation errors_, where CSL demonstrates strong performance.
+-   **Cholec80** includes both **natural inconsistencies** and **controlled corruption**.
+
+The **consistent trends across real (EgoPER) and mixed (Cholec80)** settings indicate that CSL generalizes beyond artificial noise. We will further emphasize real-error evaluation in the revision.
+
 
 We agree that real-world validation is essential. Synthetic corruption is used for **controlled and quantitative evaluation** (e.g., AUC), which is otherwise difficult due to unknown ground truth errors.
 
@@ -63,6 +72,6 @@ We will incorporate additional experiments and clarifications to further strengt
 
 We thank the reviewer again for the constructive feedback.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEzMzcyMDU4OSw4MDExNTg1MywxMTk5ND
-MxNjEwLDczMDk5ODExNl19
+eyJoaXN0b3J5IjpbLTIxMjM0MDgzODcsODAxMTU4NTMsMTE5OT
+QzMTYxMCw3MzA5OTgxMTZdfQ==
 -->
