@@ -2,7 +2,7 @@ We thank the reviewer for the thoughtful and constructive feedback. We are encou
 
 ---
 
-### 1. Novelty beyond Dataset Cartography / prior training-dynamics work
+## 1. Novelty beyond Dataset Cartography / prior training-dynamics work
 Prior work (e.g., Dataset Cartography) shows that training dynamics can reveal sample difficulty. However, our contribution is not a direct extension of these ideas, but a fundamental adaptation to temporally structured video data with new capabilities:
 -   **Frame-level + sequence-level detection:** Unlike prior work that focuses on independent samples, we explicitly model temporal inconsistency (e.g., phase disordering), which cannot be captured by per-sample difficulty alone. As discussed in Sec. 3.3, CSL reveals structured temporal signatures (e.g., boundary spikes vs. sustained mislabeling).
 -   **Unified detection of two error types:** We simultaneously detect semantic mislabeling and temporal disordering, whereas prior works only target label noise.
@@ -10,12 +10,11 @@ Prior work (e.g., Dataset Cartography) shows that training dynamics can reveal s
 
 Thus, while inspired by training dynamics, our work introduces new problem formulation, signals, and capabilities specific to video data, which we will clarify more explicitly in the revision.
 
-----------
+---
 
-### 2. Simplicity vs. technical contribution
+## 2. Simplicity vs. technical contribution
 
 We respectfully argue that simplicity is a strength, not a limitation, especially for dataset auditing tools. Importantly:
-
 -   The key innovation lies in how loss trajectories are aggregated and interpreted in temporal contexts (CSL + smoothing + sequence analysis), not in architectural complexity.
 -   We demonstrate that temporal modeling fundamentally changes the behavior of loss dynamics (Table 5): Transformers significantly outperform CNNs for disorder detection, showing that our framework captures temporal structure rather than treating frames independently.
 -   Our method provides interpretable signals (e.g., sustained vs. spiky loss patterns), which are critical for human-in-the-loop dataset cleaning.
@@ -83,6 +82,6 @@ We will revise the paper to better highlight these contributions and include add
 
 We thank the reviewer again for the valuable feedback.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc5MjM4NDYzNCwtMTA5NjkyNDM5OCwxMT
-c0MjAyNTc0LDExODkyMTQ1OTNdfQ==
+eyJoaXN0b3J5IjpbMTE2MDcwOTMsLTEwOTY5MjQzOTgsMTE3ND
+IwMjU3NCwxMTg5MjE0NTkzXX0=
 -->
