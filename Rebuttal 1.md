@@ -22,7 +22,15 @@ Importantly, temporal modeling changes loss dynamics: models that capture sequen
 We acknowledge the concern regarding checkpoint storage and evaluation. However, several factors mitigate this:
 -   CSL computation is **training-free** and requires only forward passes (no gradients), making it significantly cheaper than training.
 -   The process is **fully parallelizable** across checkpoints and samples.
--   We empirically observe that **subsampling checkpoints (every k (~5) epochs)** yields comparable performance; we will include this ablation.
+-   We empirically observe that **subsampling checkpoints (every k (~5) epochs)** yields comparable performance (2–3% drop)
+
+|Method|EDA|AUC|
+|:-|:-:|:-:|
+|Mislabeled|85.9|92.0|
+|Mislabeled (Subsampled)|84.6|90.7|
+|Disordered|74.5|78.5|
+|Disordered (Subsampled)|73.2|77.2|
+
 -   Storage can be reduced using **lightweight checkpointing** (e.g., EMA weights or partial model states).
 
 We will add experiments demonstrating robustness to reduced checkpoint frequency, clarifying the scalability trade-offs.
@@ -39,7 +47,7 @@ In the revision, we will include:
 Preliminary results show consistent trends across architectures, supporting the generality of the approach. These will be included to substantiate the model-agnostic claim.
 
 ---
-## 5. Ablation study and robustness to noise
+## 5. Robustness to noise
 We appreciate the suggestion to evaluate robustness under varying noise levels. Our current results include a 10% controlled corruption setting, where performance degradation is minimal (≤ 1.6 AUC), indicating stability.
 
 We will extend this analysis to:
@@ -56,6 +64,6 @@ In summary, our contributions are:
 -   A **training-free, scalable auditing mechanism** based on loss trajectories
 -   **Consistent empirical performance** across challenging datasets
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg4MjQ1NTgxOCwtMTA5NjkyNDM5OCwxMT
-c0MjAyNTc0LDExODkyMTQ1OTNdfQ==
+eyJoaXN0b3J5IjpbLTYxMDgyNjk4LC04ODI0NTU4MTgsLTEwOT
+Y5MjQzOTgsMTE3NDIwMjU3NCwxMTg5MjE0NTkzXX0=
 -->
