@@ -7,7 +7,6 @@ We thank the reviewer for the detailed feedback and for recognizing the importan
 Importantly, we do **not introduce any additional training requirement** beyond standard practice. Training a temporal model until convergence is already necessary for phase recognition tasks, and our method simply **reuses these existing checkpoints**.
 
 Regarding cost:
-
 -   The auditing complexity scales with _(#epochs × model size × video length)_, but:
     -   It requires **only forward passes (no gradients)**, making it significantly cheaper than training.
     -   It is **fully parallelizable** across checkpoints and videos.
@@ -19,21 +18,16 @@ In our current setup (200 epochs), checkpoint storage is on the order of standar
 
 Thus, “lightweight” should be interpreted as **no additional training overhead and simple post-hoc computation**, rather than negligible total cost.
 
-We clarify that _training-free_ refers specifically to the **auditing stage**, not the initial model training. Our method requires **no retraining, relabeling, or auxiliary models** once checkpoints are available.
+---
+## 2. Scalability to larger settings
 
-Importantly:
+We acknowledge the concern about scalability. The method is designed to be flexible:
 
--   The approach only assumes a **standard, converged phase recognition model**, not a specialized or large architecture.
--   Training until loss stabilization is standard practice and not an additional requirement introduced by our method.
--   The auditing cost scales with _(#epochs × model size × video length)_, but this trade-off is **fully controllable** (e.g., checkpoint subsampling every _k_ epochs, changing the model size).
--   The computation is **offline, parallel, and requires only forward passes**, making it substantially cheaper than training.
+-   **Checkpoint subsampling** retains most performance (to be shown in revision), reducing both storage and compute.
+-   The framework is **model-agnostic**, allowing smaller backbones when scaling.
+-   Computation is **offline and parallel**, making it practical for large datasets in distributed settings.
 
-Thus, the method is lightweight in the sense that it **reuses existing training artifacts without introducing additional training overhead or architectural complexity**.
-
-----------
-
-### 2. Scalability
-
+We will provide **empirical evidence of performance vs. checkpoint density** and detailed cost breakdowns to better support this claim.
 The method is inherently scalable:
 
 -   Storage can be reduced via **checkpoint subsampling**, **EMA weights**, or **partial checkpointing**.
@@ -91,5 +85,5 @@ In summary, the concerns primarily stem from presentation clarity rather than li
 
 We thank the reviewer again for the constructive feedback.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg3Mjc5MjQzNiw0OTQ3Mzg3MzBdfQ==
+eyJoaXN0b3J5IjpbLTExMjY0ODgzMjAsNDk0NzM4NzMwXX0=
 -->
