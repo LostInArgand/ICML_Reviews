@@ -27,9 +27,9 @@ In addition, we evaluate on:
 We acknowledge the concern regarding the O(E⋅T) cost. However:
 
 -   The computation is **offline and requires only forward passes**, making it significantly cheaper than training.
--   The method does not require large models; **any model that converges is sufficient**, enabling flexible control over model size.
+-   The method does not require large models, enabling flexible control over model size.
 -   Checkpoint subsampling (e.g., every _k_ epochs) substantially reduces cost with minimal impact (to be included in revision).
--   The process is **embarrassingly parallel** across frames and checkpoints.
+-   The process is **parallel** across frames and checkpoints.
 
 Thus, the cost–accuracy trade-off is controllable in practice, making the method scalable.
 
@@ -67,6 +67,6 @@ We will incorporate additional experiments and clarifications to further strengt
 
 We thank the reviewer again for the constructive feedback.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMjE3MTUyNjcsMTE5OTQzMTYxMCw3Mz
+eyJoaXN0b3J5IjpbLTE3MTM1ODE0NjUsMTE5OTQzMTYxMCw3Mz
 A5OTgxMTZdfQ==
 -->
