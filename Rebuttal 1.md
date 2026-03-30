@@ -19,18 +19,16 @@ Importantly, temporal modeling changes loss dynamics: models that capture sequen
 
 ---
 ## 3. Computational and storage cost
+We acknowledge the concern regarding checkpoint storage and evaluation. However, several factors mitigate this:
+-   CSL computation is **training-free** and requires only forward passes (no gradients), making it significantly cheaper than training.
+-   The process is **fully parallelizable** across checkpoints and samples.
+-   We empirically observe that **subsampling checkpoints (every k (~5) epochs)** yields comparable performance; we will include this ablation.
+-   Storage can be reduced using **lightweight checkpointing** (e.g., EMA weights or partial model states).
 
-We acknowledge the concern regarding checkpoint usage. However:
--   The overall computation cost is parallelizable.
--   In practice, subsampling checkpoint every _k_ epochs yields similar performance (we will include this ablation in the revision).
--   CSL computation requires no gradient computation and is implemented in only forward passes, making it significantly cheaper than training.
--   Checkpoint weights are stored in reduced capacity using lightweight checkpointing (e.g., EMA weights or partial layers).
+We will add experiments demonstrating robustness to reduced checkpoint frequency, clarifying the scalability trade-offs.
 
-We will add experiments demonstrating robustness to reduced checkpoint frequency, addressing scalability concerns.
-
-----------
-
-### 4. Model-agnostic claim vs. single architecture
+---
+## 4. Model-agnostic claim vs. single architecture
 
 We agree this point requires stronger evidence. While our method is architecturally independent by design (Sec. 3), we currently instantiate it with one spatial and one temporal backbone for controlled comparison.
 
@@ -74,6 +72,6 @@ We will revise the paper to better highlight these contributions and include add
 
 We thank the reviewer again for the valuable feedback.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE5MDY5ODIwLC0xMDk2OTI0Mzk4LDExNz
+eyJoaXN0b3J5IjpbMTQwNzg0NDIzLC0xMDk2OTI0Mzk4LDExNz
 QyMDI1NzQsMTE4OTIxNDU5M119
 -->
