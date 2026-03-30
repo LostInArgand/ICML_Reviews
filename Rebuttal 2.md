@@ -23,6 +23,14 @@ Thus, “lightweight” should be interpreted as **no additional training overhe
 
 We acknowledge the concern about scalability. The method is designed to be flexible:
 -   **Checkpoint subsampling** retains most performance (to be shown in revision), reducing both storage and compute.
+
+| Method                                 | EDA  | AUC  |
+|----------------------------------------|------|------|
+| LossFormer (Ours) - Mislabeled         | 85.9 | 92.0 |
+| LossFormer (Ours) - Mislabeled (Subsampled Checkpoints) | 84.6 | 90.7 |
+| LossFormer (Ours) - Disordered         | 74.5 | 78.5 |
+| LossFormer (Ours) - Disordered (Subsampled Checkpoints) | 73.2 | 77.2 |
+
 -   The framework is **model-agnostic**, allowing smaller backbones when scaling.
 -   Computation is **offline and parallel**, making it practical for large datasets in distributed settings.
 
@@ -84,5 +92,6 @@ In summary, the concerns primarily stem from presentation clarity rather than li
 
 We thank the reviewer again for the constructive feedback.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDc3MjQ4ODUwLDQ5NDczODczMF19
+eyJoaXN0b3J5IjpbLTE5NjQxOTE1MjEsNDc3MjQ4ODUwLDQ5ND
+czODczMF19
 -->
