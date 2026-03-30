@@ -2,7 +2,7 @@ We thank the reviewer for the detailed feedback and for recognizing the importan
 
 ---
 ## 1. "Lightweight / training-free"
-- By _training-free_, we specifically refer to the **auditing stage**, not the full pipeline. Our method does **not require retraining, relabeling, or auxiliary models** once standard training checkpoints are available.
+- By _training-free_, we specifically refer to the **auditing stage**, not the full pipeline. Our method is “lightweight” and does **not require retraining, relabeling, or auxiliary models** once standard training checkpoints are available, rather its **simple post-hoc computation 
 
 Importantly, “lightweight” should be interpreted as **no additional training overhead and simple post-hoc computation**. Training a temporal model until convergence is already necessary for phase recognition tasks, and our method simply **reuses these existing checkpoints**.
 
@@ -24,10 +24,10 @@ We acknowledge the concern about scalability. The method is designed to be flexi
 
 |Method|EDA|AUC|
 |:-|:-:|:-:|
-|Mislabeled|85.9|92.0|
-|Mislabeled (Subsampled)|84.6|90.7|
-|Disordered|74.5|78.5|
-|Disordered (Subsampled)|73.2|77.2|
+|Mislabel|85.9|92.0|
+|Mislabel (Sampled)|84.6|90.7|
+|Disorder|74.5|78.5|
+|Disorder (Sampled)|73.2|77.2|
 
 -   The framework is **model-agnostic**, allowing smaller backbones when scaling.
 -   Computation is **offline and parallel**, making it practical for large datasets in distributed settings.
@@ -62,6 +62,6 @@ We will improve clarity and add quantitative details, but the claims themselves 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MzQyOTc5NDcsLTEyMTk0MTI1NzEsND
-c3MjQ4ODUwLDQ5NDczODczMF19
+eyJoaXN0b3J5IjpbMzQzMjU3NDQ5LC0xMjE5NDEyNTcxLDQ3Nz
+I0ODg1MCw0OTQ3Mzg3MzBdfQ==
 -->
