@@ -2,7 +2,7 @@ We thank the reviewer for the constructive feedback and address the concerns bel
 
 ---
 
-## 1. Novelty beyond Dataset Cartography / prior training-dynamics work
+## 1. Novelty beyond Dataset Cartography / Prior training-dynamics work
 
 We agree that leveraging training dynamics to identify mislabeled samples has been explored in prior work (e.g., Dataset Cartography). However, our contribution is not a direct extension, but a reformulation tailored to **temporally structured video data.** Specifically, prior methods operate on independent samples, whereas our approach explicitly models _temporal coherence_. This enables (i) **frame-level mislabeling detection**, and (ii) identification of **sequence-level temporal disordering** (as discussed in Sec. 3.3), which cannot be captured by per-sample difficulty alone.
 
@@ -11,7 +11,7 @@ Our CSL formulation aggregates loss trajectories over time and reveals _structur
 Thus, while inspired by training dynamics, our work introduces new problem formulation, signals, and capabilities specific to video data, which we will clarify more explicitly in the revision.
 
 ---
-## 2. Simplicity vs. technical contribution
+## 2. Method simplicity vs. technical contribution
 
 While the method is **intentionally simple**, we emphasize that the core contribution lies in _how_ loss dynamics are aggregated and interpreted in temporal contexts. The combination of CSL, temporal smoothing, and sequence-level analysis yields behavior that differs qualitatively from image-based counterparts.
 
@@ -28,7 +28,7 @@ We acknowledge the concern regarding checkpoint storage and evaluation. However,
 We will add experiments demonstrating robustness to reduced checkpoint frequency, clarifying the scalability trade-offs.
 
 ---
-## 4. Model-agnostic claim vs. single architecture
+## 4. Model-agnostic claim
 
 We agree that stronger empirical validation is needed. While the method is architecture-independent by design, our current experiments focus on controlled settings with one spatial and one temporal backbone.
 
@@ -38,9 +38,8 @@ In the revision, we will include:
 
 Preliminary results show consistent trends across architectures, supporting the generality of the approach. These will be included to substantiate the model-agnostic claim.
 
-----------
-
-### 5. Ablation study and robustness to noise
+---
+## 5. Ablation study and robustness to noise
 We appreciate the suggestion to evaluate robustness under varying noise levels. Our current results include a 10% controlled corruption setting, where performance degradation is minimal (≤ 1.6 AUC), indicating stability.
 
 We will extend this analysis to:
@@ -57,6 +56,6 @@ In summary, our contributions are:
 -   A **training-free, scalable auditing mechanism** based on loss trajectories
 -   **Consistent empirical performance** across challenging datasets
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM3OTA3MDQzNywtMTA5NjkyNDM5OCwxMT
+eyJoaXN0b3J5IjpbLTg4MjQ1NTgxOCwtMTA5NjkyNDM5OCwxMT
 c0MjAyNTc0LDExODkyMTQ1OTNdfQ==
 -->
