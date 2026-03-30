@@ -2,13 +2,11 @@ We thank the reviewer for the positive assessment of our work, particularly for 
 
 ---
 ## 1. Generalization to larger datasets
+We agree that evaluation on larger benchmarks (e.g., 50Salads, Breakfast) would further strengthen the work. Our current choice of EgoPER and Cholec80 is driven by the availability of **fine-grained temporal annotations and documented annotation errors**, which are essential for validating detection.
 
-We agree that evaluation on larger benchmarks (e.g., 50Salads, Breakfast) would further strengthen the paper. Our current focus on EgoPER and Cholec80 is motivated by the availability of fine-grained temporal annotations and known annotation inconsistencies.
+Importantly, CSL is **dataset-agnostic**, as it operates purely on per-frame loss trajectories without dataset-specific assumptions. Its formulation does not depend on domain characteristics, suggesting it should transfer to larger benchmarks. We will include additional experiments on larger datasets to empirically validate this.
 
-Importantly, the proposed method is **dataset-agnostic**, as it relies only on per-frame loss trajectories during training, with no dataset-specific assumptions.
-
-----------
-
+---
 ### 2. Synthetic vs. real annotation errors
 
 We agree that real-world validation is essential. Synthetic corruption is used for **controlled and quantitative evaluation** (e.g., AUC), which is otherwise difficult due to unknown ground truth errors.
@@ -65,6 +63,6 @@ We will incorporate additional experiments and clarifications to further strengt
 
 We thank the reviewer again for the constructive feedback.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTQ2ODg2OTkyLDgwMTE1ODUzLDExOTk0Mz
-E2MTAsNzMwOTk4MTE2XX0=
+eyJoaXN0b3J5IjpbMTEzMzcyMDU4OSw4MDExNTg1MywxMTk5ND
+MxNjEwLDczMDk5ODExNl19
 -->
