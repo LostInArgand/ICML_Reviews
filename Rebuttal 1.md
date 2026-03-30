@@ -6,7 +6,7 @@ We thank the reviewer for the thoughtful and constructive feedback. We are encou
 Prior work (e.g., Dataset Cartography) shows that training dynamics can reveal sample difficulty. However, our contribution is not a direct extension of these ideas, but a fundamental adaptation to temporally structured video data with new capabilities:
 -   **Frame-level + sequence-level detection:** Unlike prior work that focuses on independent samples, we explicitly model temporal inconsistency (e.g., phase disordering), which cannot be captured by per-sample difficulty alone. As discussed in Sec. 3.3, CSL reveals structured temporal signatures (e.g., boundary spikes vs. sustained mislabeling).
 -   **Unified detection of two error types:** We simultaneously detect semantic mislabeling and temporal disordering, whereas prior works only target label noise.
--   **Post-hoc, training-free auditing:** Our method operates entirely on saved checkpoints and does not require retraining, relabeling, or auxiliary models, making it practically deployable for large video datasets. Importantly, the framework does not rely on highly complex architectures—any model that sufficiently converges on the training set for phase recognition is adequate. While training must proceed until the loss stabilizes to obtain meaningful trajectories, the overall computational cost scales with the number of epochs, model size, and test video length. This trade-off is flexible in practice, allowing users to adjust model complexity based on available resources without affecting the applicability of the method.
+-   **Post-hoc, training-free auditing:** Our method operates entirely on saved checkpoints and does not require retraining, relabeling, or auxiliary models, making it practically deployable for large video datasets. Once the training loss for a model converges, the overall computational cost of our approach scales with the number of epochs, model size, and test video length. This trade-off is flexible in practice, allowing users to adjust model complexity based on available resources without affecting the applicability of the method.
 
 Thus, while inspired by training dynamics, our work introduces new problem formulation, signals, and capabilities specific to video data, which we will clarify more explicitly in the revision.
 
@@ -83,6 +83,6 @@ We will revise the paper to better highlight these contributions and include add
 
 We thank the reviewer again for the valuable feedback.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwOTY5MjQzOTgsMTE3NDIwMjU3NCwxMT
-g5MjE0NTkzXX0=
+eyJoaXN0b3J5IjpbMTc5MjM4NDYzNCwtMTA5NjkyNDM5OCwxMT
+c0MjAyNTc0LDExODkyMTQ1OTNdfQ==
 -->
