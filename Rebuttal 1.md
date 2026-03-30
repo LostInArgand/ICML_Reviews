@@ -48,14 +48,9 @@ We will extend this analysis to:
 -   CSL distribution shifts under increasing corruption
 -   Failure modes under extreme noise
 
-We note that very high noise regimes (e.g., ≥80%) are less representative of practical scenarios, as they fundamentally alter the learning process. Instead, we focus on realistic settings where moderate corruption is added to inherently noisy real-world datasets. Even in this regime, CSL remains robust due to trajectory aggregation, which dampens stochastic noise effects.
+We note that very high noise regimes (e.g., ≥50%) are less representative of practical scenarios, as they fundamentally alter the learning process. Instead, we focus on realistic settings where moderate corruption is added to inherently noisy real-world datasets. Even in this regime, CSL remains robust due to trajectory aggregation, which dampens stochastic noise effects.
 
-We appreciate this suggestion and note that we already include a 10% noisy training experiment (Table 6), where performance drops are minimal (≤ 1.6 AUC).
 
-However, movinf to higher noisy data wil result in incorrect learning of the data labels. We will include the fwollwing ablation:
--   Extend to multiple noise levels (e.g., 20%, 40%)
--   Analyze failure modes under extreme corruption
--   Study CSL distribution shifts under increasing noise
 
 Importantly, our current results already show that CSL is robust to training noise due to trajectory aggregation, which is a key practical advantageady show that CSL is robust to training noise due to trajectory aggregation, which is a key practical advantage.
 
@@ -80,6 +75,6 @@ We will revise the paper to better highlight these contributions and include add
 
 We thank the reviewer again for the valuable feedback.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTk2NjA1NTI3LC0xMDk2OTI0Mzk4LDExNz
-QyMDI1NzQsMTE4OTIxNDU5M119
+eyJoaXN0b3J5IjpbLTIwMDEwODY2NywtMTA5NjkyNDM5OCwxMT
+c0MjAyNTc0LDExODkyMTQ1OTNdfQ==
 -->
