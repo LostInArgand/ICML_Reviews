@@ -39,7 +39,7 @@ Thus, the cost–accuracy trade-off is controllable in practice, making the meth
 
 We appreciate this suggestion. Our goal is not to propose a new segmentation architecture, but a **model-agnostic auditing framework**.
 
-Nevertheless, results in Table 5 already show that **transformer-based temporal models outperform CNNs** in detecting temporal disorder, indicating that CSL benefits from stronger sequence modeling. We will extend experiments to additional architectures (e.g., MSTCN, ASFormer) to further support this observation.
+Nevertheless, results in Table 5 already show that **transformer-based temporal models outperform CNNs** in detecting temporal disorder, indicating that CSL benefits from stronger sequence modeling. We will extend experiments to additional architectures (such as MSTCN, ASFormer) to further support this observation.
 
 ----------
 
@@ -49,7 +49,6 @@ We agree that limitations should be more clearly discussed. In the revision, we 
 
 -   Dependence on **training convergence** to obtain stable loss trajectories
 -   Increased computational cost for very large datasets (mitigated via subsampling)
--   Current validation limited to supervised temporal segmentation settings
 
 ----------
 
@@ -67,6 +66,6 @@ We will incorporate additional experiments and clarifications to further strengt
 
 We thank the reviewer again for the constructive feedback.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MTM1ODE0NjUsMTE5OTQzMTYxMCw3Mz
-A5OTgxMTZdfQ==
+eyJoaXN0b3J5IjpbODAxMTU4NTMsMTE5OTQzMTYxMCw3MzA5OT
+gxMTZdfQ==
 -->
