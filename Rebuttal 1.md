@@ -11,21 +11,11 @@ Our CSL formulation aggregates loss trajectories over time and reveals _structur
 Thus, while inspired by training dynamics, our work introduces new problem formulation, signals, and capabilities specific to video data, which we will clarify more explicitly in the revision.
 
 ---
-
 ## 2. Simplicity vs. technical contribution
 
 While the method is **intentionally simple**, we emphasize that the core contribution lies in _how_ loss dynamics are aggregated and interpreted in temporal contexts. The combination of CSL, temporal smoothing, and sequence-level analysis yields behavior that differs qualitatively from image-based counterparts.
 
-Importantly, temporal modeling changes loss dynamics: models that capture sequence structure (e.g., transformers) exhibit distinct patterns compared to frame-based models, particularly for disorder detection. This highlights that the contribution is not architectural novelty but a **new signal design and interpretation paradigm for video data**. The resulting signals are also interpretable (e.g., sustained vs. transient loss), which is crucial for practical dataset auditing. We will strengthen this discussion.
-
-
-
-We respectfully argue that simplicity is a strength, not a limitation, especially for dataset auditing tools. Importantly:
--   The key innovation lies in how loss trajectories are aggregated and interpreted in temporal contexts (CSL + smoothing + sequence analysis), not in architectural complexity.
--   Temporal modeling fundamentally changes the behavior of loss dynamics (Table 5). Transformers significantly outperform CNNs for disorder detection, thereby capturing temporal structure of videos rather than frame level interpretation.
--   Our method provides interpretable signals (e.g., sustained vs. spiky loss patterns), which are critical for human-in-the-loop dataset cleaning.
-
-We will revise the paper to better emphasize these video-specific methodological insights.
+Importantly, temporal modeling changes loss dynamics: models that capture sequence structure (e.g., transformers) exhibit **distinct patterns** compared to frame-based CNN models, particularly for disorder detection. This highlights that the contribution is not architectural novelty but a **new signal design and interpretation paradigm for video data**. The resulting signals are also interpretable (e.g., sustained vs. transient loss), which is crucial for practical dataset auditing. We will revise the discussion to better emphasize these video-specific methodological insights.
 
 ---
 ## 3. Computational and storage cost
@@ -84,6 +74,6 @@ We will revise the paper to better highlight these contributions and include add
 
 We thank the reviewer again for the valuable feedback.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTg1NjcxNjMsLTEwOTY5MjQzOTgsMTE3ND
-IwMjU3NCwxMTg5MjE0NTkzXX0=
+eyJoaXN0b3J5IjpbMTE5MDY5ODIwLC0xMDk2OTI0Mzk4LDExNz
+QyMDI1NzQsMTE4OTIxNDU5M119
 -->
