@@ -30,13 +30,14 @@ We will add experiments demonstrating robustness to reduced checkpoint frequency
 ---
 ## 4. Model-agnostic claim vs. single architecture
 
-We agree this point requires stronger evidence. While our method is architecturally independent by design (Sec. 3), we currently instantiate it with one spatial and one temporal backbone for controlled comparison.
+We agree that stronger empirical validation is needed. While the method is architecture-independent by design, our current experiments focus on controlled settings with one spatial and one temporal backbone.
 
-To address this, we will include additional experiments in the revision:
--   CNN-only model (partially shown in Table 5)
--   Alternative temporal backbones (e.g., MSTCN / ASFormer)
+In the revision, we will include:
 
-Preliminary results indicate consistent trends across architectures, supporting the model-agnostic claim.
+-   Additional CNN-based models
+-   Alternative temporal architectures (e.g., multi-stage temporal convolution and transformer variants)
+
+Preliminary results show consistent trends across architectures, supporting the generality of the approach. These will be included to substantiate the model-agnostic claim.
 
 ----------
 
@@ -72,6 +73,6 @@ We will revise the paper to better highlight these contributions and include add
 
 We thank the reviewer again for the valuable feedback.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQwNzg0NDIzLC0xMDk2OTI0Mzk4LDExNz
-QyMDI1NzQsMTE4OTIxNDU5M119
+eyJoaXN0b3J5IjpbMTI1MzQ2OTE5MiwtMTA5NjkyNDM5OCwxMT
+c0MjAyNTc0LDExODkyMTQ1OTNdfQ==
 -->
