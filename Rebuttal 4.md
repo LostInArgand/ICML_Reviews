@@ -1,8 +1,7 @@
-We thank the reviewer for the positive assessment of our work, particularly for recognizing the effectiveness of cumulative loss dynamics and the unified handling of semantic mislabeling and temporal disordering. We address the concerns below.
+We thank the reviewer for the positive assessment of our work, particularly for recognizing the effectiveness of CSL and the unified handling of semantic mislabeling and temporal disordering. We address the concerns below.
 
-----------
-
-### 1. Generalization to larger and diverse datasets
+---
+## 1. Generalization to larger datasets
 
 We agree that evaluation on larger benchmarks (e.g., 50Salads, Breakfast) would further strengthen the paper. Our current focus on EgoPER and Cholec80 is motivated by the availability of fine-grained temporal annotations and known annotation inconsistencies.
 
@@ -66,6 +65,6 @@ We will incorporate additional experiments and clarifications to further strengt
 
 We thank the reviewer again for the constructive feedback.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODAxMTU4NTMsMTE5OTQzMTYxMCw3MzA5OT
-gxMTZdfQ==
+eyJoaXN0b3J5IjpbOTQ2ODg2OTkyLDgwMTE1ODUzLDExOTk0Mz
+E2MTAsNzMwOTk4MTE2XX0=
 -->
