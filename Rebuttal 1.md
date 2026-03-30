@@ -28,7 +28,7 @@ We acknowledge the concern regarding checkpoint usage. However:
 -   The overall computation cost is parallelizable.
 -   In practice, subsampling checkpoint every _k_ epochs yields similar performance (we will include this ablation in the revision).
 -   CSL computation requires no gradient computation and is implemented in only forward passes, making it significantly cheaper than training.
--   Storing chekcpoint Storage can be reduced using lightweight checkpointing (e.g., EMA weights or partial layers).
+-   Checkpoint weights are stored in reduced capacity using lightweight checkpointing (e.g., EMA weights or partial layers).
 
 We will add experiments demonstrating robustness to reduced checkpoint frequency, addressing scalability concerns.
 
@@ -36,10 +36,9 @@ We will add experiments demonstrating robustness to reduced checkpoint frequency
 
 ### 4. Model-agnostic claim vs. single architecture
 
-We agree this point requires stronger evidence. While our method is architecturally independent by design (Sec. 3), we currently instantiate it with one backbone for controlled comparison.
+We agree this point requires stronger evidence. While our method is architecturally independent by design (Sec. 3), we currently instantiate it with one spatial and one temporal backbone for controlled comparison.
 
 To address this, we will include additional experiments in the revision:
-
 -   CNN-only model (partially shown in Table 5)
 -   Alternative temporal backbones (e.g., MSTCN / ASFormer)
 
@@ -80,6 +79,6 @@ We will revise the paper to better highlight these contributions and include add
 
 We thank the reviewer again for the valuable feedback.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM1MTg5NDExMCwtMTA5NjkyNDM5OCwxMT
+eyJoaXN0b3J5IjpbLTQzOTMyMDY1MiwtMTA5NjkyNDM5OCwxMT
 c0MjAyNTc0LDExODkyMTQ1OTNdfQ==
 -->
