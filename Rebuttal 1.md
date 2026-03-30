@@ -48,33 +48,15 @@ We will extend this analysis to:
 -   CSL distribution shifts under increasing corruption
 -   Failure modes under extreme noise
 
-We note that very high noise regimes (e.g., ≥50%) are less representative of practical scenarios, as they fundamentally alter the learning process. Instead, we focus on realistic settings where moderate corruption is added to inherently noisy real-world datasets. Even in this regime, CSL remains robust due to trajectory aggregation, which dampens stochastic noise effects.
+We note that very high noise regimes (e.g., ≥50%) are less representative of practical scenarios, as they fundamentally alter the learning process. Instead, we focus on realistic settings where moderate corruption is added to inherently noisy real-world datasets. Even in this regime, CSL remains robust due to trajectory aggregation, which dampens stochastic noise effects. We will clarify this design choice and its motivation in the revision.
 
-
-
-Importantly, our current results already show that CSL is robust to training noise due to trajectory aggregation, which is a key practical advantageady show that CSL is robust to training noise due to trajectory aggregation, which is a key practical advantage.
-
-We note that evaluating at very high contamination rates is less meaningful in this context, as such datasets deviate significantly from realistic training conditions and are rarely used in practice. Instead, we focus on a more practical regime by introducing an additional 10\% controlled corruption on top of existing (unknown) real-world annotation noise. This setting reflects realistic scenarios where datasets contain a mixture of clean and noisy labels.  
-  
-Importantly, even under this setting, CSL demonstrates strong robustness and reliably identifies corrupted samples. We will clarify this design choice and its motivation in the revision.
-
-----------
-
-### 6. Summary
-
-In summary, we believe the reviewer’s concerns stem mainly from positioning clarity rather than limitations of the method. Our contributions are:
-
--   A novel formulation of annotation error detection in temporal video data
--   A unified framework for semantic and temporal errors
--   A simple, scalable, and training-free auditing mechanism
--   Strong empirical results across two challenging datasets
-
-We will revise the paper to better highlight these contributions and include additional experiments addressing the reviewer’s concerns.
-
-----------
-
-We thank the reviewer again for the valuable feedback.
+---
+In summary, our contributions are:
+-   A **novel formulation** of annotation error detection for temporally structured video data
+-   A **unified framework** for detecting both semantic and temporal errors
+-   A **training-free, scalable auditing mechanism** based on loss trajectories
+-   **Consistent empirical performance** across challenging datasets
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMDEwODY2NywtMTA5NjkyNDM5OCwxMT
+eyJoaXN0b3J5IjpbLTM3OTA3MDQzNywtMTA5NjkyNDM5OCwxMT
 c0MjAyNTc0LDExODkyMTQ1OTNdfQ==
 -->
