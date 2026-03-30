@@ -25,9 +25,9 @@ We acknowledge the concern about scalability. The method is designed to be flexi
 |Method|EDA|AUC|
 |:-|:-:|:-:|
 |Mislabel|85.9|92.0|
-|Mislabel (Sampled)|84.6|90.7|
+|Mislabel (Subsampled)|84.6|90.7|
 |Disorder|74.5|78.5|
-|Disorder (Sampled)|73.2|77.2|
+|Disorder (Subsampled)|73.2|77.2|
 
 -   The framework is **model-agnostic**, allowing smaller backbones when scaling.
 -   Computation is **offline and parallel**, making it practical for large datasets in distributed settings.
@@ -62,6 +62,6 @@ The claims themselves are *not overreaching*. The revision will focus on improvi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxNDY1NjgxNjYsLTEyMTk0MTI1NzEsND
-c3MjQ4ODUwLDQ5NDczODczMF19
+eyJoaXN0b3J5IjpbMzk1NzY0MDY0LC0xMjE5NDEyNTcxLDQ3Nz
+I0ODg1MCw0OTQ3Mzg3MzBdfQ==
 -->
