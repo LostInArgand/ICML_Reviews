@@ -6,19 +6,19 @@ We thank the reviewer for the constructive feedback and address the concerns bel
 
 We agree that leveraging training dynamics to identify mislabeled samples has been explored in prior work (e.g., Dataset Cartography). However, our contribution is not a direct extension, but a reformulation tailored to **temporally structured video data.** Specifically, prior methods operate on independent samples, whereas our approach explicitly models _temporal coherence_. This enables (i) **frame-level mislabeling detection**, and (ii) identification of **sequence-level temporal disordering** (as discussed in Sec. 3.3), which cannot be captured by per-sample difficulty alone.
 
-Our CSL formulation aggregates loss trajectories over time and reveals _structured temporal signatures_ (e.g., boundary-localized spikes vs. sustained inconsistencies), providing signals that are fundamentally unavailable in static settings. In addition, we **unify semantic mislabeling and temporal inconsistency detection** within a single framework, whereas prior work focuses only on label noise. We will revise the paper to more clearly position these distinctions.
-
-
-Prior work (e.g., Dataset Cartography) shows that training dynamics can reveal sample difficulty. However, our contribution is not a direct extension of these ideas, but a fundamental adaptation to temporally structured video data with new capabilities:
--   **Frame-level + sequence-level detection:** Unlike prior work that focuses on independent samples, we explicitly model temporal inconsistency (e.g., phase disordering), which cannot be captured by per-sample difficulty alone. As discussed in Sec. 3.3, CSL reveals structured temporal signatures (e.g., boundary spikes vs. sustained mislabeling).
--   **Unified detection of two error types:** We simultaneously detect semantic mislabeling and temporal disordering, whereas prior works only target label noise.
--   **Post-hoc, training-free auditing:** Our method operates entirely on saved checkpoints and does not require retraining, relabeling, or auxiliary models, making it practically deployable for large video datasets. Once the training loss for a model converges, the overall computational cost of our approach scales with the number of epochs, model size, and test video length. This trade-off is flexible in practice, allowing users to adjust model complexity based on available resources without affecting the applicability of the method.
+Our CSL formulation aggregates loss trajectories over time and reveals _structured temporal signatures_ (e.g., boundary-localized spikes vs. sustained inconsistencies), providing signals that are fundamentally unavailable in static settings. In addition, we **unify semantic mislabeling and temporal inconsistency detection** within a single framework, whereas prior work focuses only on label noise. 
 
 Thus, while inspired by training dynamics, our work introduces new problem formulation, signals, and capabilities specific to video data, which we will clarify more explicitly in the revision.
 
 ---
 
 ## 2. Simplicity vs. technical contribution
+
+While the method is **intentionally simple**, we emphasize that the core contribution lies in _how_ loss dynamics are aggregated and interpreted in temporal contexts. The combination of CSL, temporal smoothing, and sequence-level analysis yields behavior that differs qualitatively from image-based counterparts.
+
+Importantly, temporal modeling changes loss dynamics: models that capture sequence structure (e.g., transformers) exhibit distinct patterns compared to frame-based models, particularly for disorder detection. This highlights that the contribution is not architectural novelty but a **new signal design and interpretation paradigm for video data**. The resulting signals are also interpretable (e.g., sustained vs. transient loss), which is crucial for practical dataset auditing. We will strengthen this discussion.
+
+
 
 We respectfully argue that simplicity is a strength, not a limitation, especially for dataset auditing tools. Importantly:
 -   The key innovation lies in how loss trajectories are aggregated and interpreted in temporal contexts (CSL + smoothing + sequence analysis), not in architectural complexity.
@@ -84,6 +84,6 @@ We will revise the paper to better highlight these contributions and include add
 
 We thank the reviewer again for the valuable feedback.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc3MDgwMDU2NSwtMTA5NjkyNDM5OCwxMT
-c0MjAyNTc0LDExODkyMTQ1OTNdfQ==
+eyJoaXN0b3J5IjpbNTg1NjcxNjMsLTEwOTY5MjQzOTgsMTE3ND
+IwMjU3NCwxMTg5MjE0NTkzXX0=
 -->
