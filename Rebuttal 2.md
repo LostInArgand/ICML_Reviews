@@ -4,7 +4,7 @@ We thank the reviewer for the detailed feedback and for recognizing the importan
 ## 1. "Lightweight / training-free"
 - By _training-free_, we specifically refer to the **auditing stage**, not the full pipeline. Our method does **not require retraining, relabeling, or auxiliary models** once standard training checkpoints are available.
 
-Importantly, we do **not introduce any additional training requirement** beyond standard practice. Training a temporal model until convergence is already necessary for phase recognition tasks, and our method simply **reuses these existing checkpoints**.
+Importantly, “lightweight” should be interpreted as **no additional training overhead and simple post-hoc computation**. Training a temporal model until convergence is already necessary for phase recognition tasks, and our method simply **reuses these existing checkpoints**.
 
 Regarding cost:
 -   The auditing complexity scales with _(#epochs × model size × video length)_, but:
@@ -15,8 +15,6 @@ Regarding cost:
     -   **EMA or partial checkpoints**
 
 In our current setup (200 epochs), checkpoint storage is on the order of standard training logs, and auditing runtime is comparable to a small multiple of inference. We will include **explicit runtime and storage statistics** and scaling analysis (longer videos, larger backbones) in the revision.
-
-Thus, “lightweight” should be interpreted as **no additional training overhead and simple post-hoc computation**, rather than negligible total cost.
 
 ---
 ## 2. Scalability to larger settings
@@ -58,12 +56,12 @@ Importantly, we observe **consistent behavior across both datasets**, indicating
 We respectfully disagree that our claims are overstated; they are **supported by both the method design and empirical results**.
 -   **Training-free / lightweight:** These terms refer to the **auditing stage**, which requires no retraining or auxiliary models and uses only forward passes on existing checkpoints. 
 -   **Scalability:** While costs exist, they are **controllable (e.g., checkpoint subsampling)** and **parallelizable**. Our results remain stable under reduced checkpoint density, supporting practical scalability.
--   **Novelty and positioning:** Although grounded in prior training-dynamics intuition, our contribution is the **extension to temporally structured video**, enabling **temporal inconsistency detection and sequence-level signals**, which are validated across datasets.
+-   **Novelty and positioning:** Although grounded in prior training-dynamics intuition, our contribution is the **extension to temporally structured video**, enabling **temporal inconsistency detection and sequence-level signals** validated across datasets.
 
 We will improve clarity and add quantitative details, but the claims themselves are **not overreaching**.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMzNTM4ODUzMiwtMTIxOTQxMjU3MSw0Nz
-cyNDg4NTAsNDk0NzM4NzMwXX0=
+eyJoaXN0b3J5IjpbLTE4MzQyOTc5NDcsLTEyMTk0MTI1NzEsND
+c3MjQ4ODUwLDQ5NDczODczMF19
 -->
