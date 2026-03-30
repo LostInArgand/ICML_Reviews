@@ -56,12 +56,12 @@ Importantly, we observe **consistent behavior across both datasets**, indicating
 We respectfully disagree that our claims are overstated; they are **supported by both the method design and empirical results**.
 -   **Training-free / lightweight:** These terms refer to the **auditing stage**, which requires no retraining or auxiliary models and uses only forward passes on existing checkpoints. 
 -   **Scalability:** While costs exist, they are **controllable (e.g., checkpoint subsampling)** and **parallelizable**. Our results remain stable under reduced checkpoint density, supporting practical scalability.
--   **Novelty and positioning:** Although grounded in prior training-dynamics intuition, our contribution is the **extension to temporally structured video**, enabling **temporal inconsistency detection and sequence-level signals** validated across datasets.
+-   **Novelty and positioning:** Although grounded in prior training-dynamics intuition, our contribution is the **extension to temporally structured video**, enabling **temporal inconsistency detection** validated across datasets.
 
-We will improve clarity and add quantitative details, but the claims themselves are *not overreaching*.
+The claims themselves are *not overreaching*. The revision will focus on improving clarity and providing additional quantitative evidence.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjIzNDYxNjY2LC0xMjE5NDEyNTcxLDQ3Nz
-I0ODg1MCw0OTQ3Mzg3MzBdfQ==
+eyJoaXN0b3J5IjpbLTIxNDY1NjgxNjYsLTEyMTk0MTI1NzEsND
+c3MjQ4ODUwLDQ5NDczODczMF19
 -->
