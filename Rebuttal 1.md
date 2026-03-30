@@ -50,7 +50,7 @@ Preliminary results indicate consistent trends across architectures, supporting 
 
 We appreciate this suggestion and note that we already include a 10% noisy training experiment (Table 6), where performance drops are minimal (≤ 1.6 AUC).
 
-WeImportantly, our current results aglree that broader analysis would strengthen the paper. In the revision, we will:
+However, movinf to higher noisy data wil result in incorrect learning of the data labels. We will i
 
 -   Extend to multiple noise levels (e.g., 20%, 40%)
 -   Analyze failure modes under extreme corruption
@@ -79,6 +79,6 @@ We will revise the paper to better highlight these contributions and include add
 
 We thank the reviewer again for the valuable feedback.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQzOTMyMDY1MiwtMTA5NjkyNDM5OCwxMT
-c0MjAyNTc0LDExODkyMTQ1OTNdfQ==
+eyJoaXN0b3J5IjpbMzg1Mjk2Mzc3LC0xMDk2OTI0Mzk4LDExNz
+QyMDI1NzQsMTE4OTIxNDU5M119
 -->
