@@ -40,17 +40,15 @@ Thus, while non-trivial, the cost is **controllable and practical** in typical t
 We agree that comparisons with stronger temporal models are important.
 Our goal is not to propose a new segmentation architecture, but a **model-agnostic auditing framework** for temporal-rich video datasets. 
 
--   Results already show that **transformer-based temporal models outperform CNNs** in detecting temporal disorder, indicating CSL benefits from stronger sequence modeling.
+-   Results in Table 5 already show that **transformer-based temporal models outperform CNNs** in detecting temporal disorder, indicating CSL benefits from stronger sequence modeling.
 -   We will extend experiments to **recent state-of-the-art architectures** (e.g., MSTCN, ASFormer) to demonstrate consistency across models.
 
+---
+## 5. Limitations
+We acknowledge the importance of clearly stating limitations. Our method relies on **reasonably converged training**, as stable loss trajectories are necessary for reliable CSL estimation. In settings where training is highly unstable or underfit, the signal may be less informative.
 
-We appreciate this suggestion. Our goal is not to propose a new segmentation architecture, but a **model-agnostic auditing framework**.
+Additionally, the method incurs **computational overhead for large-scale datasets** due to checkpoint evaluation. However, this cost is **controllable in practice** through strategies such as checkpoint subsampling and parallel processing, which preserve performance while improving efficiency.
 
-Nevertheless, results in Table 5 already show that **transformer-based temporal models outperform CNNs** in detecting temporal disorder, indicating that CSL benefits from stronger sequence modeling. We will extend experiments to additional architectures (such as MSTCN, ASFormer) to further support this observation.
-
-----------
-
-### 5. Limitations
 
 We agree that limitations should be more clearly discussed. In the revision, we will explicitly include:
 
@@ -73,6 +71,6 @@ We will incorporate additional experiments and clarifications to further strengt
 
 We thank the reviewer again for the constructive feedback.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NzQwNjM3OTMsODAxMTU4NTMsMTE5OT
+eyJoaXN0b3J5IjpbLTE3NTc4NzQ1ODYsODAxMTU4NTMsMTE5OT
 QzMTYxMCw3MzA5OTgxMTZdfQ==
 -->
