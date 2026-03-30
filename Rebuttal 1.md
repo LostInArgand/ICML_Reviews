@@ -58,13 +58,17 @@ Preliminary results indicate consistent trends across architectures, supporting 
 
 We appreciate this suggestion and note that we already include a 10% noisy training experiment (Table 6), where performance drops are minimal (≤ 1.6 AUC).
 
-We agree that broader analysis would strengthen the paper. In the revision, we will:
+WeImportantly, our current results aglree that broader analysis would strengthen the paper. In the revision, we will:
 
 -   Extend to multiple noise levels (e.g., 20%, 40%)
 -   Analyze failure modes under extreme corruption
 -   Study CSL distribution shifts under increasing noise
 
-Importantly, our current results already show that CSL is robust to training noise due to trajectory aggregation, which is a key practical advantage.
+Importantly, our current results already show that CSL is robust to training noise due to trajectory aggregation, which is a key practical advantageady show that CSL is robust to training noise due to trajectory aggregation, which is a key practical advantage.
+
+We note that evaluating at very high contamination rates is less meaningful in this context, as such datasets deviate significantly from realistic training conditions and are rarely used in practice. Instead, we focus on a more practical regime by introducing an additional 10\% controlled corruption on top of existing (unknown) real-world annotation noise. This setting reflects realistic scenarios where datasets contain a mixture of clean and noisy labels.  
+  
+Importantly, even under this setting, CSL demonstrates strong robustness and reliably identifies corrupted samples. We will clarify this design choice and its motivation in the revision.
 
 ----------
 
@@ -83,5 +87,5 @@ We will revise the paper to better highlight these contributions and include add
 
 We thank the reviewer again for the valuable feedback.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzMwODk3NTg1XX0=
+eyJoaXN0b3J5IjpbMTE4OTIxNDU5Myw3MzA4OTc1ODVdfQ==
 -->
