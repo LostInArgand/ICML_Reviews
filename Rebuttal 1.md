@@ -1,5 +1,3 @@
-# Rebuttal to Reviewer 1
-
 We thank the reviewer for the thoughtful and constructive feedback. We are encouraged that the reviewer recognizes the practical importance of the problem and the strong empirical performance of our approach. Below we address the main concerns.
 
 ----------
@@ -87,5 +85,5 @@ We will revise the paper to better highlight these contributions and include add
 
 We thank the reviewer again for the valuable feedback.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE4OTIxNDU5M119
+eyJoaXN0b3J5IjpbMTE3NDIwMjU3NCwxMTg5MjE0NTkzXX0=
 -->
