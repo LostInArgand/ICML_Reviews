@@ -50,8 +50,7 @@ Preliminary results indicate consistent trends across architectures, supporting 
 
 We appreciate this suggestion and note that we already include a 10% noisy training experiment (Table 6), where performance drops are minimal (≤ 1.6 AUC).
 
-However, movinf to higher noisy data wil result in incorrect learning of the data labels. We will i
-
+However, movinf to higher noisy data wil result in incorrect learning of the data labels. We will include the fwollwing ablation:
 -   Extend to multiple noise levels (e.g., 20%, 40%)
 -   Analyze failure modes under extreme corruption
 -   Study CSL distribution shifts under increasing noise
@@ -79,6 +78,6 @@ We will revise the paper to better highlight these contributions and include add
 
 We thank the reviewer again for the valuable feedback.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzg1Mjk2Mzc3LC0xMDk2OTI0Mzk4LDExNz
-QyMDI1NzQsMTE4OTIxNDU5M119
+eyJoaXN0b3J5IjpbLTQ3MjA5OTYzMiwtMTA5NjkyNDM5OCwxMT
+c0MjAyNTc0LDExODkyMTQ1OTNdfQ==
 -->
