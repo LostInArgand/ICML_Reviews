@@ -2,9 +2,9 @@ We thank the reviewer for the detailed feedback and for recognizing the importan
 
 ---
 ## 1. "Lightweight / training-free"
-- By _training-free_, we specifically refer to the **auditing stage**, not the full pipeline. Our method is “lightweight” and does **not require retraining, relabeling, or auxiliary models** once standard training checkpoints are available, rather its **simple post-hoc computation 
+- By _training-free_, we specifically refer to the **auditing stage**, not the full pipeline. Our method is “lightweight” as it does **not require retraining, relabeling, or auxiliary models** once standard training checkpoints are available, rather it's a **simple post-hoc computation**. 
 
-Importantly, “lightweight” should be interpreted as **no additional training overhead and simple post-hoc computation**. Training a temporal model until convergence is already necessary for phase recognition tasks, and our method simply **reuses these existing checkpoints**.
+Training a temporal model until convergence is already necessary for phase recognition tasks, and our method simply **reuses these existing checkpoints**.
 
 Regarding cost:
 -   The auditing complexity scales with _(#epochs × model size × video length)_, but:
@@ -58,10 +58,10 @@ We respectfully disagree that our claims are overstated; they are **supported by
 -   **Scalability:** While costs exist, they are **controllable (e.g., checkpoint subsampling)** and **parallelizable**. Our results remain stable under reduced checkpoint density, supporting practical scalability.
 -   **Novelty and positioning:** Although grounded in prior training-dynamics intuition, our contribution is the **extension to temporally structured video**, enabling **temporal inconsistency detection and sequence-level signals** validated across datasets.
 
-We will improve clarity and add quantitative details, but the claims themselves are **not overreaching**.
+We will improve clarity and add quantitative details, but the claims themselves are *not overreaching*.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzQzMjU3NDQ5LC0xMjE5NDEyNTcxLDQ3Nz
+eyJoaXN0b3J5IjpbMjIzNDYxNjY2LC0xMjE5NDEyNTcxLDQ3Nz
 I0ODg1MCw0OTQ3Mzg3MzBdfQ==
 -->
