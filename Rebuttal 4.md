@@ -11,24 +11,29 @@ Importantly, CSL is **dataset-agnostic**, as it operates purely on per-frame los
 We acknowledge the limitation of relying partly on synthetic corruption. Synthetic noise enables **controlled, quantitative evaluation** (e.g., AUC), which is otherwise infeasible due to unknown ground-truth errors.
 
 Crucially, our evaluation is not limited to synthetic settings:
-
 -   **EgoPER** contains _real semantic and temporal annotation errors_, where CSL demonstrates strong performance.
 -   **Cholec80** includes both **natural inconsistencies** and **controlled corruption**.
 
 The **consistent trends across real (EgoPER) and mixed (Cholec80)** settings indicate that CSL generalizes beyond artificial noise. We will further emphasize real-error evaluation in the revision.
 
+---
 
-We agree that real-world validation is essential. Synthetic corruption is used for **controlled and quantitative evaluation** (e.g., AUC), which is otherwise difficult due to unknown ground truth errors.
+### 3. Computational cost of CSL (O(E·T))
+We acknowledge the computational cost of evaluating across checkpoints. However:
+-   CSL is **training-free and uses only forward passes**, making it significantly cheaper than training.
+-   The process is **fully parallelizable** across frames and checkpoints.
+-   Cost can be reduced via **checkpoint subsampling**, with minimal performance loss.
 
-In addition, we evaluate on:
+|Method|EDA|AUC|
+|:-|:-:|:-:|
+|Mislabel|85.9|92.0|
+|Mislabel (Subsampled)|84.6|90.7|
+|Disorder|74.5|78.5|
+|Disorder (Subsampled)|73.2|77.2|
 
--   **EgoPER (real errors):** This dataset already contains intentionally mislabeled and temporally disordered samples, as described in its original paper. We directly evaluate CSL on these real annotation errors, demonstrating its effectiveness in realistic settings.
--   **Cholec80 (controlled validation):** While Cholec80 also contains some naturally occurring annotation inconsistencies, we introduce additional synthetic corruption to enable controlled and quantitative evaluation.
--   Consistent behavior across **EgoPER (real errors)** and **Cholec80 (synthetic + real errors)** supports the generality and robustness of CSL.
+-   The method does not require large models, allowing **flexible scaling via backbone choice**.
 
-----------
-
-### 3. Computational cost of CSL
+Thus, while non-trivial, the cost is **controllable and practical** in typical training pipelines.
 
 We acknowledge the concern regarding the O(E⋅T) cost. However:
 
@@ -72,6 +77,6 @@ We will incorporate additional experiments and clarifications to further strengt
 
 We thank the reviewer again for the constructive feedback.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMjM0MDgzODcsODAxMTU4NTMsMTE5OT
+eyJoaXN0b3J5IjpbLTE2MjI3MzYyMDksODAxMTU4NTMsMTE5OT
 QzMTYxMCw3MzA5OTgxMTZdfQ==
 -->
