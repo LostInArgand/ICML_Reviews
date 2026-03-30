@@ -6,7 +6,7 @@ We thank the reviewer for the positive assessment of our work, particularly for 
 
 We agree that evaluation on larger benchmarks (e.g., 50Salads, Breakfast) would further strengthen the paper. Our current focus on EgoPER and Cholec80 is motivated by the availability of fine-grained temporal annotations and known annotation inconsistencies.
 
-Importantly, the proposed method is **dataset-agnostic**, as it relies only on per-frame loss trajectories during training, with no dataset-specific assumptions. We are currently extending experiments to additional datasets (including 50Salads), and preliminary results show **consistent trends in identifying temporally inconsistent segments**. These results will be included in the revision.
+Importantly, the proposed method is **dataset-agnostic**, as it relies only on per-frame loss trajectories during training, with no dataset-specific assumptions.
 
 ----------
 
@@ -68,5 +68,6 @@ We will incorporate additional experiments and clarifications to further strengt
 
 We thank the reviewer again for the constructive feedback.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE5OTQzMTYxMCw3MzA5OTgxMTZdfQ==
+eyJoaXN0b3J5IjpbLTM1NDI1NjEyOCwxMTk5NDMxNjEwLDczMD
+k5ODExNl19
 -->
