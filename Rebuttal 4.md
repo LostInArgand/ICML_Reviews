@@ -49,28 +49,13 @@ We acknowledge the importance of clearly stating limitations. Our method relies 
 
 Additionally, the method incurs **computational overhead for large-scale datasets** due to checkpoint evaluation. However, this cost is **controllable in practice** through strategies such as checkpoint subsampling and parallel processing, which preserve performance while improving efficiency.
 
-
-We agree that limitations should be more clearly discussed. In the revision, we will explicitly include:
-
--   Dependence on **training convergence** to obtain stable loss trajectories
--   Increased computational cost for very large datasets (mitigated via subsampling)
-
-----------
-
-### 6. Summary
-
-We believe the reviewer’s concerns are valid and primarily relate to additional validation and clarity. Our contributions are:
-
--   A **simple and effective framework** for detecting both semantic and temporal annotation errors
--   A **model-agnostic approach** leveraging training dynamics without modifying training procedures
--   Strong empirical performance across two real-world datasets
-
-We will incorporate additional experiments and clarifications to further strengthen the paper.
-
-----------
-
-We thank the reviewer again for the constructive feedback.
+---
+In Summary, the concerns primarily relate to **scale, validation breadth, and comparisons**, rather than fundamental limitations. We will strengthen the paper by:
+-   Adding experiments on **larger and more diverse datasets**
+-   Expanding evaluation on **real annotation errors**
+-   Including **comparisons with recent temporal models**
+-   Providing clearer analysis of **computational trade-offs**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NTc4NzQ1ODYsODAxMTU4NTMsMTE5OT
-QzMTYxMCw3MzA5OTgxMTZdfQ==
+eyJoaXN0b3J5IjpbLTE0NjQ4OTk0Myw4MDExNTg1MywxMTk5ND
+MxNjEwLDczMDk5ODExNl19
 -->
