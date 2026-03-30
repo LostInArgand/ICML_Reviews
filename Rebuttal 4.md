@@ -17,16 +17,14 @@ We agree that real-world validation is essential. Synthetic corruption is used f
 In addition, we evaluate on:
 
 -   **EgoPER (real errors):** This dataset already contains intentionally mislabeled and temporally disordered samples, as described in its original paper. We directly evaluate CSL on these real annotation errors, demonstrating its effectiveness in realistic settings.
--   **Cholec80 (controlled validation):** While Cholec80 also contains some naturally occurring annotation inconsistencies (e.g., out-of-context frames during surgical phases), we introduce additional synthetic corruption to enable controlled and quantitative evaluation (e.g., AUC).
+-   **Cholec80 (controlled validation):** While Cholec80 also contains some naturally occurring annotation inconsistencies, we introduce additional synthetic corruption to enable controlled and quantitative evaluation.
 -   Consistent behavior across **EgoPER (real errors)** and **Cholec80 (synthetic + real errors)** supports the generality and robustness of CSL.
-
-We will strengthen this section with additional **real-error case studies** and clearer separation between synthetic and real evaluations.
 
 ----------
 
 ### 3. Computational cost of CSL
 
-We acknowledge the concern regarding the O(E⋅T)O(E \cdot T)O(E⋅T) cost. However:
+We acknowledge the concern regarding the O(E⋅T) cost. However:
 
 -   The computation is **offline and requires only forward passes**, making it significantly cheaper than training.
 -   The method does not require large models; **any model that converges is sufficient**, enabling flexible control over model size.
@@ -69,6 +67,6 @@ We will incorporate additional experiments and clarifications to further strengt
 
 We thank the reviewer again for the constructive feedback.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDY5NTE1MjYsMTE5OTQzMTYxMCw3MzA5OT
-gxMTZdfQ==
+eyJoaXN0b3J5IjpbLTExMjE3MTUyNjcsMTE5OTQzMTYxMCw3Mz
+A5OTgxMTZdfQ==
 -->
